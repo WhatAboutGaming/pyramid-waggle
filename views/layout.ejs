@@ -1,0 +1,35 @@
+<%
+	var bodyClasses = [], _enableScripts = true;
+
+	try {
+		if (appConfig && appConfig.enableDarkMode) {
+			bodyClasses.push("darkmode");
+		}
+	} catch(e) {}
+
+	try {
+		_enableScripts = enableScripts;
+	} catch(e) {}
+
+	var bodyClassName = bodyClasses.join(" ");
+%><!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pyramid</title>
+	<link rel="stylesheet" href="/dist/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" sizes="16x16 32x32" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" sizes="420x420" href="/img/pyramid-icon.png" type="image/png">
+	<link rel="apple-touch-icon" href="/img/pyramid-icon.png" type="image/png">
+</head>
+<body class="<%= bodyClassName %>">
+<%- body %>
+<% if (_enableScripts) { %>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/dist/js/main.js"></script>
+<% } %>
+</body>
+</html>

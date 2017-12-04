@@ -1,0 +1,30 @@
+<%
+	// PYRAMID
+	// Index page
+
+	var inscriptEscape = (str) => {
+		if (!str) {
+			return "undefined";
+		}
+
+		return str.replace(/<\/script/g, "\\x3c/script");
+	};
+%>
+<script>
+	var pyramid_appConfig = <%- inscriptEscape(JSON.stringify(appConfig)) %>;
+	var pyramid_awakeTime = <%- inscriptEscape(JSON.stringify(awakeTime)) %>;
+	var pyramid_friendsList = <%- inscriptEscape(JSON.stringify(friendsList)) %>;
+	var pyramid_ircConfigs = <%- inscriptEscape(JSON.stringify(ircConfig)) %>;
+	var pyramid_ircConnectionState = <%- inscriptEscape(JSON.stringify(ircConnectionState)) %>;
+	var pyramid_lastSeenChannels = <%- inscriptEscape(JSON.stringify(lastSeenChannels)) %>;
+	var pyramid_lastSeenUsers = <%- inscriptEscape(JSON.stringify(lastSeenUsers)) %>;
+	var pyramid_myToken = <%- inscriptEscape(JSON.stringify(token)) %>;
+	var pyramid_nicknames = <%- inscriptEscape(JSON.stringify(nicknames)) %>;
+	var pyramid_onlineFriends = <%- inscriptEscape(JSON.stringify(onlineFriends)) %>;
+	var pyramid_serverData = <%- inscriptEscape(JSON.stringify(serverData)) %>;
+	var pyramid_unseenConversations = <%- inscriptEscape(JSON.stringify(unseenConversations)) %>;
+	var pyramid_unseenHighlights = <%- inscriptEscape(JSON.stringify(unseenHighlights)) %>;
+	var pyramid_viewState = <%- inscriptEscape(JSON.stringify(viewState)) %>;
+</script>
+<main></main>
+<noscript>Please <strong>turn JavaScript on</strong> to experience Pyramid. Sorry about that.</noscript>
