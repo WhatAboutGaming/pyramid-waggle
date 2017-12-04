@@ -1,0 +1,45 @@
+.connection-warning {
+	background-color: #900;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	padding: 10px 0;
+	line-height: 20px;
+	list-style-type: none;
+	white-space: nowrap;
+	-webkit-app-region: drag;
+
+	body.electron-mac & {
+		padding-left: 75px;
+	}
+
+	a {
+		color: inherit !important;
+		text-decoration: underline;
+		-webkit-app-region: no-drag;
+	}
+
+	li {
+		display: inline;
+		margin: 0 .5em;
+	}
+
+	&__full {
+		display: inline;
+	}
+
+	&__short {
+		display: none;
+	}
+
+	@media #{$mobile-media} {
+		&__full {
+			display: none;
+		}
+
+		&__short {
+			display: inline;
+		}
+	}
+}

@@ -1,0 +1,305 @@
+body.darkmode {
+	&,
+	.sidebar,
+	.mainview__top,
+	.chatview__input,
+	.chatview__input input[type="text"],
+	.chatview__pagination,
+	.chatview__controls,
+	.channeluserlist,
+	.chatview .contextview__main,
+	.pop-menu,
+	.switcher a,
+	.multichat__item {
+		background-color: #2b2b33;
+		color: #ccc;
+
+		border-color: #4b4b55;
+	}
+
+	.sidebar {
+		background-color: #222227;
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	.chatview__pagination ul li strong {
+		color: #eee;
+	}
+
+	.loader:before, .loader:after {
+		border-bottom-color: #fff;
+	}
+
+	.sidebar__head,
+	.sidebar__list,
+	.sidebar__list-head,
+	.settings__section,
+	.settings__container,
+	.settings__list ul,
+	.settings__list-item,
+	.settings__add,
+	.settings__detail-view,
+	.password-input,
+	.chatview__pagination ul li a,
+	.chatview__pagination ul li strong {
+		border-color: #444;
+	}
+
+	.chatview {
+		.line__channel,
+		.line__channel a,
+		.line time,
+		.userevent,
+		.bunchedevents,
+		.unhide,
+		&__channel-flags {
+			color: #777;
+		}
+
+		.line .prefix {
+			color: #999;
+		}
+
+		.userevent,
+		.bunchedevents {
+			&:before {
+				background-color: #777;
+			}
+		}
+
+		.userevent--strong {
+			color: #ccc;
+			&:before {
+				background-color: #ccc;
+			}
+		}
+
+		.line--connection {
+			&:after {
+				background-color: #444;
+			}
+
+			.line__main > span {
+				background-color: #2b2b33;
+			}
+		}
+
+		.msg--cleared {
+			&, a {
+				text-decoration-color: #ccc;
+			}
+		}
+
+		.connectionevent {
+			color: #64bcf3;
+
+			&:before {
+				background-color: #64bcf3;
+			}
+
+			&--bad {
+				color: #c00;
+
+				&:before {
+					background-color: #c00;
+				}
+			}
+		}
+
+		&__input input[type="text"] {
+			&:focus {
+				border-color: #5b5b88;
+			}
+		}
+	}
+
+	.chatusername {
+		// Increased contrast for colors
+		&--color {
+			&-0  { color: #0080ff; }
+			&-1  { color: #0c8f0c; }
+			&-2  { color: #f0087c; }
+			&-3  { color: #ce1dea; }
+			&-4  { color: #178d65; }
+			&-5  { color: #885dfb; }
+			&-6  { color: #6b8526; }
+			&-7  { color: #b347ea; }
+			&-8  { color: #f70510; }
+			&-9  { color: #8871ad; }
+			&-10 { color: #518585; }
+			&-11 { color: #c65e0a; }
+			&-12 { color: #808000; }
+			&-13 { color: #5e8187; }
+			&-14 { color: #6e6ee6; }
+			&-15 { color: #92793d; }
+			&-16 { color: #887c23; }
+			&-17 { color: #4c81a6; }
+			&-18 { color: #be6055; }
+			&-19 { color: #ae5ead; }
+			&-20 { color: #5b9e4c; }
+			&-21 { color: #1b8b75; }
+			&-22 { color: #ca5757; }
+			&-23 { color: #e45d59; }
+			&-24 { color: #3f7ade; }
+			&-25 { color: #6b77c1; }
+			&-26 { color: #c63fcf; }
+			&-27 { color: #8c7a4f; }
+			&-28 { color: #0b9578; }
+			&-29 { color: #569c96; }
+		}
+	}
+
+	// Highlights
+	.chatview .line--highlight,
+	.chatview .contextview--highlight,
+	.sidebar .highlightslink--highlighted {
+		background-color: #035;
+	}
+
+	.chatview .line--highlight.line--unseen-highlight {
+		background-color: #258;
+	}
+
+	.chatview .line--highlight mark {
+		background-color: rgba(255,255,255,.2);
+	}
+
+	.chatview .line--notice {
+		background-color: rgba(255,255,255,.1);
+	}
+
+	.sidebar .highlightslink .badge {
+		background-color: rgba(0,0,0,.25);
+	}
+
+	.sidebar__tabs .badge,
+	.sidebar__list .badge {
+		background-color: #258;
+	}
+
+	.global-header {
+		.highlightslink--highlighted {
+			background-color: #258;
+			border-color: #2b2b33;
+		}
+	}
+
+	// Keep the sidebar right border even in mobile mode
+	.sidebar__outer:after {
+		background-color: rgba(255,255,255,.2);
+
+		@media #{$mobile-media} {
+			display: block;
+			transition: .5s left ease-in-out;
+		}
+	}
+
+	.chatview__frame__secondary:after {
+		background-color: rgba(255,255,255,.2);
+	}
+
+	.sidebar__outer--hidden:after {
+		@media #{$mobile-media} {
+			left: -1px;
+		}
+	}
+
+	.chatview__pagination ul li.next a,
+	.chatview__pagination ul li.prev a {
+		border-color: transparent;
+	}
+
+	// Links
+	a {
+		color: #7be;
+	}
+
+	.itemlist a {
+		color: inherit;
+	}
+
+	// Chromes
+	.settingsview input,
+	.settingsview button,
+	.settingsview select,
+	.settingsview textarea,
+	.logbrowser input {
+		border-color: #7b7b88;
+		background-color: #4b4b55;
+		color: #eee;
+	}
+
+	.settings__detail-view,
+	.pop-menu .menu__link:hover {
+		background-color: #3b3b44;
+	}
+
+	.settings__detail-view .settings__list {
+		background-color: #2b2b33;
+	}
+
+	.settings__list-item:nth-child(even):not(.settings__list-item--selected) {
+		background-color: #33333b;
+	}
+
+	.settings__list-item--selected,
+	.logbrowser__items a.current {
+		background-color: #7be;
+		border-color: #7be;
+		color: #000;
+	}
+
+	.pop-menu {
+		box-shadow: 0 5px 12px 0 rgba(0,0,0,.8);
+
+		&, .sep {
+			border-color: #6b6b77;
+		}
+	}
+
+	.menu-opener--active {
+		background-color: #32323b;
+	}
+
+	.menu__link, .switcher button, .switcher a {
+		color: #bbb;
+	}
+
+	.sidebar__head {
+		.version {
+			color: #777;
+		}
+	}
+
+	@media #{$mobile-media} {
+		.sidebar, .channeluserlist {
+			box-shadow: 0 0 60px 0 #000;
+		}
+	}
+
+	.multichat {
+		&__inner {
+			background-color: #4b4b55;
+		}
+
+		&__item {
+			&--focus {
+				&:after {
+					border-color: rgba(255,255,255,.1);
+				}
+			}
+		}
+	}
+
+	&.custom-scrollbars .scroller {
+		&::-webkit-scrollbar-thumb,
+		&::-webkit-scrollbar-track-piece {
+			background-color: #5b5b60;
+			border-color: #2b2b33;
+		}
+
+		&::-webkit-scrollbar-track-piece {
+			background-color: #3b3b44;
+		}
+	}
+}

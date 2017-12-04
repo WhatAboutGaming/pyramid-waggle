@@ -1,0 +1,29 @@
+.global-header {
+	display: none;
+
+	@media #{$mobile-media} {
+		display: block;
+	}
+
+	.highlightslink {
+		display: none;
+		pointer-events: none;
+
+		&--highlighted {
+			display: block;
+			position: absolute;
+			top: 4px;
+			left: 18px;
+			z-index: 10;
+
+			background-color: #b9af7c;
+			color: #fff;
+			border: 2px solid #fff;
+			border-radius: 100px;
+			line-height: 1.2em;
+			min-width: 0.8em;
+			padding: 0 0.2em;
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,260 @@
+.settingsview {
+	.mainview__inner-frame {
+		padding: 20px;
+	}
+
+	> div > *:first-child {
+		margin-top: 0;
+	}
+
+	&__top {
+		h2 {
+			float: left;
+			margin-right: 10px;
+		}
+	}
+
+	&__tabs a.selected {
+		font-weight: bold;
+	}
+
+	@media #{$mobile-media} {
+		margin-top: 60px;
+
+		&__top {
+			&__main {
+				// Undo flex since it breaks layout in narrow viewports
+				display: block;
+
+				h2 {
+					float: none;
+				}
+			}
+		}
+
+		&__tabs {
+			margin: 6px 0 -3px -6px;
+		}
+	}
+}
+
+.settings {
+	&__section {
+		& + & {
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #ccc;
+		}
+
+		h2 {
+			color: #999;
+			font-size: 1em;
+			text-transform: uppercase;
+			margin-top: 0;
+		}
+	}
+
+	&__setting {
+		margin-bottom: 20px;
+
+		h3 {
+			margin: 0 0 .25em;
+			font-size: 1em;
+		}
+
+		p {
+			margin: .25em 0;
+		}
+	}
+
+	&__list {
+		max-width: 600px;
+		margin: 0 auto;
+
+		ul {
+			border: 1px solid #ccc;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		&-item {
+			display: flex;
+			border-bottom: 1px solid #ccc;
+			padding: 3px 0;
+
+			overflow-x: auto;
+
+			&:nth-child(even) {
+				background-color: #f6f6f6;
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			&--selected {
+				background-color: #225;
+				border-color: #225;
+				color: #fff;
+			}
+
+			> * {
+				margin: 0 10px;
+			}
+
+			strong {
+				flex: 1 1 auto;
+			}
+
+			em {
+				flex: 0 0 auto;
+				font-style: normal;
+			}
+
+			button {
+				flex: 0 0 auto;
+			}
+
+			@media #{$mobile-media} {
+				overflow-x: auto;
+			}
+		}
+
+		&--selectable &-item {
+			cursor: pointer;
+		}
+
+		&-buttons {
+			text-align: right;
+			padding: 0 0 3px;
+		}
+	}
+
+	&__container {
+		border: 1px solid #ccc;
+		padding: 20px;
+		margin: 0 0 20px;
+
+		h1 {
+			margin-top: 0;
+		}
+	}
+
+	&__add {
+		position: relative;
+		border: 2px solid #ccc;
+		border-radius: 6px;
+		padding: 20px;
+		margin: 0 0 20px;
+
+		h3 {
+			margin-top: 0;
+			margin-right: 35px;
+		}
+
+		&__close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+	}
+
+	&__rightcontrol {
+		float: right;
+		margin: 0 0 10px 10px;
+	}
+
+	&__detail-view {
+		display: flex;
+		border: 1px solid #ccc;
+		background-color: #eee;
+	}
+
+	&__detail-view &__list {
+		flex: 0 0 auto;
+		width: 30%;
+		background-color: #fff;
+		overflow: hidden;
+
+		.settings--irc & {
+			min-width: 350px;
+		}
+
+		ul {
+			border-left: none;
+			border-right: none;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__detail-view &__list-buttons {
+		padding: 10px;
+	}
+
+	&__detail {
+		&-view &-item,
+		&-view &-noitem {
+			flex: 1 1 auto;
+			padding: 20px;
+			min-height: 400px;
+		}
+
+		&-view &-noitem {
+			text-align: center;
+			font-size: 125%;
+			color: #999;
+		}
+
+		&-view &-item h3 {
+			margin-top: 0;
+		}
+	}
+
+	&__detail-view &__add {
+		margin: 10px;
+		padding: 10px 15px;
+
+		h3 {
+			margin-bottom: 0;
+		}
+
+		p {
+			margin: .5em 0;
+		}
+
+		p.l label {
+			width: 5em;
+		}
+	}
+
+	@media #{$mobile-media} {
+		&__detail-view {
+			display: block;
+		}
+
+		&__detail-view &__list {
+			flex: none;
+			width: 100%;
+
+			ul {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.password-input {
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+
+	&--editing {
+		border: none;
+		padding: 0;
+	}
+
+	strong {
+		color: #999;
+	}
+}
