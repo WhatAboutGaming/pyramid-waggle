@@ -14,7 +14,7 @@ module.exports = {
 	timeZone: "UTC",
 
 	webHostname: undefined,
-	webPort: 8887,
+	webPort: process.env.PORT || 5000 ,
 
 	// Encryption mode
 	strongIrcPasswordEncryption: false,
