@@ -5,7 +5,7 @@ module.exports = {
 	debug: false,
 
 	// Whether or not to store the log files as text files in a folder
-	logLinesFile: true,
+	logLinesFile: false,
 
 	// HTTPS certificate settings
 	httpsCertPath: "",
@@ -14,13 +14,13 @@ module.exports = {
 	timeZone: "UTC",
 
 	webHostname: undefined,
-	webPort: process.env.PORT || 5000 ,
+	webPort: process.env.YOUR_PORT || process.env.PORT || 3000,
 
 	// Encryption mode
 	strongIrcPasswordEncryption: false,
 
 	// Scrollback ("cache") length
-	cacheLines: 150,
+	cacheLines: 500,
 
 	// How much to retain in the db
 	retainDbValue: 1000000,
@@ -29,7 +29,7 @@ module.exports = {
 	// Appearance
 	showUserEvents: 1,
 	enableUsernameColors: true,
-	enableDarkMode: false,
+	enableDarkMode: true,
 	enableEmojiCodes: true,
 	enableEmojiImages: true,
 	enableDesktopNotifications: true,
@@ -43,8 +43,8 @@ module.exports = {
 	enableTwitchChannelDisplayNames: true,
 	colorBlindness: 0,
 	enableTwitchUserDisplayNames: 1,
-	showTwitchDeletedMessages: false,
-	showTwitchClearChats: false,
+	showTwitchDeletedMessages: true,
+	showTwitchClearChats: true,
 	showTwitchCheers: 2,
 	enableFfzEmoticons: true,
 	enableFfzGlobalEmoticons: true,
