@@ -1,1 +1,1 @@
-web: node pyramid.js $PORT
+web: node pyramid.js -p $PORT

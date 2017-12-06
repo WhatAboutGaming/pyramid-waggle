@@ -85,7 +85,7 @@ module.exports = function(main, io) {
 		let certPath = config("httpsCertPath");
 		let keyPath = config("httpsKeyPath");
 		let webHostname = config("webHostname");
-		let webPort = config("webPort");
+		let webPort = config(process.env.YOUR_PORT || process.env.PORT || 3000);
 
 		if (keyPath && certPath) {
 			// Secure HTTPS server
