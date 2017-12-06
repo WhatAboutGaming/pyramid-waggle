@@ -1,1 +1,1 @@
-web: node pyramid.js --port $PORT --host 0.0.0.0
+web: node pyramid.js webpack-dev-server --port $PORT --host 0.0.0.0 
