@@ -11,7 +11,7 @@ ADD . /app
 RUN npm install
 
 # Make port 8887 available to the world outside this container
-EXPOSE -p $PORT
+EXPOSE -p process.env.YOUR_PORT || process.env.PORT || 3000
 
 # Starting command
 CMD ["npm", "start"]

@@ -1,1 +1,1 @@
-web: node pyramid.js -p $PORT
+web: node pyramid.js -p process.env.YOUR_PORT || process.env.PORT || 3000
