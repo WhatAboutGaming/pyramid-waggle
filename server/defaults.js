@@ -13,7 +13,7 @@ module.exports = {
 
 	timeZone: "UTC",
 
-	webHostname: undefined,
+	webHostname: 0.0.0.0,
 	webPort: process.env.YOUR_PORT || process.env.PORT || 3000,
 
 	// Encryption mode
